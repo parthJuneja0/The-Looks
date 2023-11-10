@@ -27,7 +27,9 @@ After completing this project, I gained valuable clarity over CSS concepts. The 
 
 ## Usage
 
-You can clone the repository and open the respective HTML files in your web browser.
+Explore the project on GitHub Pages: https://parthjuneja0.github.io/The-Looks
+
+Alternatively, you can clone the repository and open the respective HTML files in your web browser.
 
 ## Note
 
