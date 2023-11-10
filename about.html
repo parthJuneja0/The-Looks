@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bricolage+Grotesque:opsz@10..48&family=Mukta:wght@500&family=PT+Serif:ital@1&family=REM:wght@100&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to left,
+                    #ffd78e,
+                    #ffc88e,
+                    #ffa58e,
+                    #ff8e8e);
+            font-family: 'PT Serif', serif;
+        }
+
+        nav {
+            height: 100px;
+            display: flex;
+            flex-flow: column wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            position: fixed;
+            z-index: 2;
+        }
+
+        nav img {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            border-radius: 50%;
+            width: 90px;
+        }
+
+        nav ul {
+            width: auto;
+            position: absolute;
+            right: 60px;
+            top: 15px;
+            display: flex;
+            flex-flow: row wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 22px 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: underline;
+        }
+
+        nav ul li a:hover {
+            color: #ffd78e;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 20px 0px;
+            padding: 30px 0px;
+        }
+
+        #img img {
+            width: 100%;
+            object-fit: cover;
+            height: 500px;
+            clear: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #nothing {
+            display: flex;
+            height: 400px;
+            justify-content: center;
+            align-items: end;
+            font-size: 80px;
+            z-index: -1;
+        }
+
+        #one {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        #one div {
+            width: 70%;
+            margin: 20px 0px;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        #one div h2 {
+            margin: 10px 0px;
+            font-size: 50px;
+        }
+
+        section div h3 {
+            margin: 10px 0px;
+            font-size: 32px;
+            text-decoration: underline;
+        }
+
+        section p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        hr {
+            width: 85%;
+            margin: auto;
+            border: 2px solid black;
+        }
+
+        #two {
+            width: 100%;
+            height: auto;
+            background-color: #fff2db;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 30px;
+        }
+
+        #two div {
+            width: 28%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <nav>
+            <img src="Media/logo.png" alt="">
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="location.html" target="_blank">Location</a></li> -->
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </head>
+
+    <div id="img">
+        <img src="Media/aboutSalon.jpg" alt="">
+    </div>
+
+    <section id="nothing">
+        <h1>...</h1>
+    </section>
+
+    <section id="one">
+        <div>
+            <h2>The Looks</h2>
+            <p>Looks Salon is one of the most powerful and fastest growing salon chain brand PanIndia, that has given
+                the hairstyling industry a new horizon. Emerging as the largest single salon chain in the country.</p>
+        </div>
+        <hr>
+        <div>
+            <h3>History of the Company</h3>
+            <p>Looks salon was established in January,1989 and has consistently shown year on year growth and is now a
+                chain of 162 branches PanIndia. Looks salon is on a growth path of 200 salons; currently employing over
+                6000 employees across India. Looks salon has remained a pioneer in hair, beauty & nail services and is
+                now setting new bench marks in make up exceeding all industry standards to give professionalism a new
+                art form.</p><br>
+            <p>Looks has successfully partnered with L’Oreal in establishing the Brands – L’Oreal Professional, Premium
+                brand Kerastase and also matrix across its chain of salons. Looks is one of the largest market share
+                holders of L’Oreal Professional.</p><br>
+            <p>Looks Salon has also branched out in the field of eductaion and successfully launched its own academy
+                with departments of Hair, Make-up and Beauty which has churned out numerous batches of students who are
+                now happily employed and have kick started their career in a big way.</p>
+        </div>
+    </section>
+
+    <section id="two">
+        <div>
+            <h3>Corporate vision</h3>
+            <p>Our vision is to be a leading customer centric salon chain, warmly welcoming all customers for an
+                experience which takes them on a high in terms of quality Hair, beauty & Skin services in a hygienic,
+                relaxed, comfortable environment to make their day fabulous.</p>
+        </div>
+        <div>
+            <h3>Customer promise</h3>
+            <p>Our commitment is to always try to master the art of exemplary services & experience; it is our endeavor
+                to serve with excellence. We feel under oath to provide an unwinding environment with precision, detail
+                and purpose where you can immerse yourself in peace and luxury.</p>
+        </div>
+    </section>
+
+    <footer> The LOOKS | Contact Us via email - test@mail.com </footer>
+
+</body>
+
+</html>

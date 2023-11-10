@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bricolage+Grotesque:opsz@10..48&family=Mukta:wght@500&family=PT+Serif:ital@1&family=REM:wght@100&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to left,
+                    #ffd78e,
+                    #ffc88e,
+                    #ffa58e,
+                    #ff8e8e);
+            font-family: 'PT Serif', serif;
+        }
+
+        nav {
+            display: flex;
+            flex-flow: column wrap;
+            height: 100px;
+        }
+
+        nav img {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            border-radius: 50%;
+            width: 90px;
+        }
+
+        nav ul {
+            width: auto;
+            position: absolute;
+            right: 60px;
+            top: 15px;
+            display: flex;
+            flex-flow: row wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 22px 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: underline;
+        }
+
+        nav ul li a:hover {
+            color: #ffc88e;
+        }
+
+        #main {
+            width: 100%;
+            height: 100vh;
+            color: white;
+        }
+
+        video {
+            width: inherit;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+            filter: brightness(0.6);
+        }
+
+        #main div {
+            width: inherit;
+            height: inherit;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+
+        #main div h1 {
+            font-size: 90px;
+        }
+
+        #main div p {
+            font-size: 30px;
+            margin: 10px 20px;
+        }
+
+        #secondary {
+            height: auto;
+            margin-top: 40px;
+            color: black;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #secondary h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #secondary li {
+            display: inline-block;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            margin: 0px 60px;
+        }
+
+        #secondary button {
+            height: 50px;
+            width: 300px;
+            margin: 20px;
+            padding: 10px 20px;
+            outline: none;
+            border: 2px solid white;
+            background-color: black;
+            outline: none;
+            color: white;
+            border-radius: 40px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        #secondary button:hover {
+            color: rgb(170, 170, 170);
+        }
+
+        #img {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #img img {
+            height: 200px;
+            width: 200px;
+            margin: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+
+        #img img:hover {
+            transform: scale(1.2);
+            transition: all 0.4s ease-in-out;
+            box-shadow: 5px 5px 6px 0px black;
+            border: none;
+        }
+
+        hr {
+            border: 2px solid black;
+            width: 94%;
+            margin: 30px auto;
+        }
+
+        #team {
+            height: auto;
+            width: 94%;
+            color: black;
+            margin-top: 40px;
+            margin: auto;
+        }
+
+        #team h2 {
+            text-align: center;
+            font-size: 40px;
+            margin: 30px 0px;
+        }
+
+        #team img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid black;
+        }
+
+        #team div {
+            display: flex;
+            flex-flow: row wrap;
+            height: auto;
+            width: 25%;
+            display: inline-block;
+            background-color: #fff2db;
+            border: 2px solid black;
+            border-radius: 50px;
+            margin: 0px 15px;
+            padding: 40px;
+        }
+
+        #team div h3 {
+            margin: 5px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 20px 0px;
+            padding: 30px 0px;
+        }
+
+        #team span {
+            display: inline-block;
+            position: relative;
+            bottom: 220px;
+            left: 40%;
+            width: 80px;
+            text-align: center;
+            transform: scale(4);
+            cursor: pointer;
+        }
+
+        #team-1 {
+            position: relative;
+            z-index: 3;
+        }
+
+        #team-2 {
+            z-index: 2;
+            position: relative;
+            right: 30%;
+        }
+
+        #team-3 {
+            z-index: 1;
+            position: relative;
+            right: 60%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <head>
+        <nav>
+            <img src="Media/logo.png" alt="">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <!-- <li><a href="location.html" target="_blank">Location</a></li> -->
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </head>
+    <section id="main">
+        <video src="Media/hair_salon.mp4" autoplay loop muted plays-inline fixed></video>
+        <div>
+            <h1>THE LOOKS - Men Salon</h1>
+            <p> - Best available salon in Delhi</p>
+        </div>
+    </section>
+    <section id="secondary">
+        <h2>Meet the Best Ever Salon professionals and let them provide you your desired look!</h2>
+        <ol type="1">
+            <li>&bull; Layer or Blunt cut</li>
+            <li>&bull; Tapering</li>
+            <li>&bull; Feathering</li>
+        </ol>
+        <button>Book an appointment</button>
+        <div id="img">
+            <img src="Media/salon1.webp" alt="">
+            <img src="Media/salon2.avif" alt="">
+            <img src="Media/salon3.jpg" alt="">
+            <img src="Media/salon4.jpg" alt="">
+        </div>
+    </section>
+    <hr>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div id="team-1" class="card">
+            <img src="Media/team1.jpg" alt="">
+            <h3>Name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam porro, sint unde non, earum ab cupiditate
+                atque hic, doloribus error quos impedit! Rem, praesentium nihil molestiae alias magnam, vel mollitia
+                quia sint iusto autem sunt omnis non? Sequi, consectetur error?</p>
+        </div>
+        <div id="team-2" class="card">
+            <img src="Media/team2.jpg" alt="">
+            <h3>Name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam porro, sint unde non, earum ab cupiditate
+                atque hic, doloribus error quos impedit! Rem, praesentium nihil molestiae alias magnam, vel mollitia
+                quia sint iusto autem sunt omnis non? Sequi, consectetur error?</p>
+        </div>
+        <div id="team-3" class="card">
+            <img src="Media/team3.jpg" alt="">
+            <h3>Name</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam porro, sint unde non, earum ab cupiditate
+                atque hic, doloribus error quos impedit! Rem, praesentium nihil molestiae alias magnam, vel mollitia
+                quia sint iusto autem sunt omnis non? Sequi, consectetur error?</p>
+        </div>
+        <span id="arrow">
+            &#8594;
+        </span>
+    </section>
+
+    <footer> The LOOKS | Contact Us via email - test@mail.com </footer>
+
+</body>
+
+<script>
+    const arrow = document.getElementById('arrow');
+    const team1 = document.getElementById('team-1');
+    const team2 = document.getElementById('team-2');
+    const team3 = document.getElementById('team-3');
+
+    arrow.addEventListener('click', () => {
+        // team1.style.right = '60%';
+        team2.style.right = '0%';
+        team3.style.right = '0%';
+    })
+</script>
+
+</html>
